@@ -22,6 +22,7 @@ contract Lottery {
         delete players; // Clears the players array
     }
 
+    //only manager can pick the winners >_<
     modifier restricted() {
         require(msg.sender == manager, "Only the manager can call this function");
         _;
